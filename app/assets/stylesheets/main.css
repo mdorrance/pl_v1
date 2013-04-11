@@ -24,3 +24,7 @@ strong {font-weight:600;}
 
 ul.inline-list {border-top: 1px dotted #ccc;border-bottom: 1px dotted #ccc;margin-left:0px;padding:8px 0;}
 ul.inline-list li {margin:0 20px 0 0;}
+
+ul.clearing-thumbs {list-style: none;margin-bottom: 20px;}
+ul.clearing-thumbs li {display:inline;}
+ul.clearing-thumbs li a.th {width:22%;margin-right:5px;}
