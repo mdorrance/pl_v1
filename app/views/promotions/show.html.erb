@@ -1,79 +1,99 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Password:</b>
-  <%= @promotion.password %>
-</p>
+<div class="row">
+  <div class="columns">
+    <h1><%= @promotion.title %></h1>
+    <h2><%= @promotion.subtitle %></h2>
+  </div>
+</div>
 
-<p>
-  <b>Title:</b>
-  <%= @promotion.title %>
-</p>
+<div class="row">
+  <div class="large-9 columns">
 
-<p>
-  <b>Subtitle:</b>
-  <%= @promotion.subtitle %>
-</p>
+    <div class="flex-video widescreen vimeo">
+      <iframe src="http://player.vimeo.com/video/<%= @promotion.video_embed %>?title=0&amp;byline=0&amp;portrait=0" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+    </div>
 
-<p>
-  <b>Phone:</b>
-  <%= @promotion.phone %>
-</p>
+    <ul class="inline-list">
+      <li>22 DAYS LEFT</li>
+      <li><a><i class="icon-phone"></i> <%= @promotion.phone %></a></li>
+      <li><a href="mailto:<%= @promotion.email %>"><i class="icon-envelope"></i> Send an Email</a></li>
+      <li><a href="<%= @promotion.download_link %>"><i class="icon-download"></i> Download <%= @promotion.download_name %></a></li>
+    </ul>
 
-<p>
-  <b>Email:</b>
-  <%= @promotion.email %>
-</p>
+    <p>
+      <b>Phone:</b>
+      <%= @promotion.phone %>
+    </p>
 
-<p>
-  <b>Download name:</b>
-  <%= @promotion.download_name %>
-</p>
+    <p>
+      <b>Email:</b>
+      <%= @promotion.email %>
+    </p>
 
-<p>
-  <b>Download link:</b>
-  <%= @promotion.download_link %>
-</p>
+    <p>
+      <b>Download name:</b>
+      <%= @promotion.download_name %>
+    </p>
 
-<p>
-  <b>Video embed:</b>
-  <%= @promotion.video_embed %>
-</p>
+    <p>
+      <b>Download link:</b>
+      <%= @promotion.download_link %>
+    </p>
 
-<p>
-  <b>Content:</b>
-  <%= @promotion.content %>
-</p>
+    <p>
+      <b>Video embed:</b>
+      <%= @promotion.video_embed %>
+    </p>
 
-<p>
-  <b>Photo1:</b>
-  <%= @promotion.photo1 %>
-</p>
+    <p>
+      <b>Content:</b>
+      <%= @promotion.content %>
+    </p>
 
-<p>
-  <b>Photo2:</b>
-  <%= @promotion.photo2 %>
-</p>
+    <p>
+      <b>Photo1:</b>
+      <%= @promotion.photo1 %>
+    </p>
 
-<p>
-  <b>Photo3:</b>
-  <%= @promotion.photo3 %>
-</p>
+    <p>
+      <b>Photo2:</b>
+      <%= @promotion.photo2 %>
+    </p>
 
-<p>
-  <b>Photo4:</b>
-  <%= @promotion.photo4 %>
-</p>
+    <p>
+      <b>Photo3:</b>
+      <%= @promotion.photo3 %>
+    </p>
 
-<p>
-  <b>Map link:</b>
-  <%= @promotion.map_link %>
-</p>
+    <p>
+      <b>Photo4:</b>
+      <%= @promotion.photo4 %>
+    </p>
 
-<p>
-  <b>User:</b>
-  <%= @promotion.user_id %>
-</p>
+  </div>
+  <div class="large-3 columns">
+    <p>
+      <b>Map link:</b>
+      <%= @promotion.map_link %>
+    </p>
+
+    <p>
+      <b>User:</b>
+      <%= @promotion.user_id %>
+    </p>
+
+    <p>
+      <b>Password:</b>
+      <%= @promotion.password %>
+    </p>
+  </div>
+</div>
+
+
+
+
+
 
 
 <%= link_to 'Edit', edit_promotion_path(@promotion) %> |
